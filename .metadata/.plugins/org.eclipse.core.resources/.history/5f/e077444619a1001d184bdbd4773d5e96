@@ -1,0 +1,19 @@
+package ex02;
+
+public class MemberDAO {
+
+	private DatabaseDev databaseDev;
+
+	public MemberDAO(DatabaseDev dev) {
+		// TODO Auto-generated constructor stub
+	}
+
+	public DatabaseDev getDatabaseDev() {
+		return databaseDev;
+	}
+
+	public void setDatabaseDev(DatabaseDev databaseDev) {
+		this.databaseDev = databaseDev;
+	}
+	
+}

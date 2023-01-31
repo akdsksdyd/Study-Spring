@@ -1,0 +1,9 @@
+package ex06;
+
+public class ServiceImpl {
+
+	public String hello() {
+		return null;
+	}
+	
+}

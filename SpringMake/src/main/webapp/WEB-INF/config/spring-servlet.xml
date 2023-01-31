@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+	<!-- 컨트롤러를 종류의 따라 다양하게 만들어 줄 수 있다. -->
+	<bean id="xxx" class="com.simple.controller.MainController" />
+
+	<!-- 컨트롤러를 맵핑시키는 핸들러 클래스 커스터마이징 -->
+	<bean
+		class="org.springframework.web.servlet.handler.SimpleUrlHandlerMapping">
+		<property name="mappings">
+			<props>
+				<prop key="/test/aaa">xxx</prop>
+				<prop key="/test/bbb">xxx</prop>
+			</props>
+		</property>
+	</bean>
+
+	<!-- 뷰 합성기(뷰 리졸버) -->
+	<bean class="org.springframework.web.servlet.view.InternalResourceViewResolver">
+		<property name="prefix" value="/WEB-INF/views/"/>
+		<property name="suffix" value=".jsp"/>
+	</bean>
+
+
+</beans>

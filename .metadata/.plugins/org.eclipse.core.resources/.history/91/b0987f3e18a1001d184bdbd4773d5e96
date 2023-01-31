@@ -1,0 +1,11 @@
+package ex07;
+
+import org.springframework.context.annotation.Configuration;
+
+//xml을 대신해서 설정파일로 사용 할 때
+@Configuration
+public class JavaConfig {
+	
+	
+
+}

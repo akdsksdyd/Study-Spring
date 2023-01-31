@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<qualifiedTypeNameHistroy>
+    <fullyQualifiedTypeName name="javax.swing.Spring"/>
+    <fullyQualifiedTypeName name="ex01.SpringTest"/>
+    <fullyQualifiedTypeName name="ex02.Chef"/>
+    <fullyQualifiedTypeName name="ex02.Hotel"/>
+    <fullyQualifiedTypeName name="ex02.DatabaseDev"/>
+    <fullyQualifiedTypeName name="ex03.Customer"/>
+    <fullyQualifiedTypeName name="java.util.Map"/>
+    <fullyQualifiedTypeName name="java.lang.invoke.CallSite"/>
+    <fullyQualifiedTypeName name="java.util.List"/>
+    <fullyQualifiedTypeName name="org.springframework.context.support.GenericXmlApplicationContext"/>
+    <fullyQualifiedTypeName name="ex04.Airplane"/>
+    <fullyQualifiedTypeName name="ex04.Car"/>
+</qualifiedTypeNameHistroy>

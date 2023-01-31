@@ -1,0 +1,15 @@
+package ex05;
+
+import org.springframework.beans.factory.annotation.Autowired;
+
+public class Printer {
+
+	private Document doc;
+	
+	//생성자
+//	@Autowired
+	public Printer(Document doc) {
+		this.doc = doc;
+	}
+
+}
