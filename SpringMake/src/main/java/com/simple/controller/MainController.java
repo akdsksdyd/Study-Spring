@@ -26,7 +26,7 @@ public class MainController extends MultiActionController{
 			//확장
 			//model과 view정보를 담는 객체
 			ModelAndView mv = new ModelAndView();
-//			mv.setViewName("/WEB-INF/views/home.jsp"); //뷰의 정보
+			//mv.setViewName("/WEB-INF/views/home.jsp"); //뷰의 정보
 			mv.setViewName("home");
 			mv.addObject("data", "hello world"); //데이터 정보
 			

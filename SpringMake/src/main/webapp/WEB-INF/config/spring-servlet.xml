@@ -1,12 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <beans xmlns="http://www.springframework.org/schema/beans"
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+	xmlns:mvc="http://www.springframework.org/schema/mvc"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xsi:schemaLocation="http://www.springframework.org/schema/mvc http://www.springframework.org/schema/mvc/spring-mvc-3.1.xsd
+		http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-3.1.xsd">
 
 	<!-- 컨트롤러를 종류의 따라 다양하게 만들어 줄 수 있다. -->
-	<bean id="xxx" class="com.simple.controller.MainController" />
+	<!-- <bean id="xxx" class="com.simple.controller.MainController" /> -->
 
 	<!-- 컨트롤러를 맵핑시키는 핸들러 클래스 커스터마이징 -->
+	<!-- 
 	<bean
 		class="org.springframework.web.servlet.handler.SimpleUrlHandlerMapping">
 		<property name="mappings">
@@ -15,7 +20,21 @@
 				<prop key="/test/bbb">xxx</prop>
 			</props>
 		</property>
-	</bean>
+	</bean> 
+	-->
+
+	<!-- 스프링 내부에 있는 어노테이션 방법으로 핸들러맵핑과 핸들러어댑터 기능을 제공. -->
+	<mvc:annotation-driven/> 
+	
+	<!-- 해당 패키지를 읽어서 @Controller가 있는 클래스를 자동으로 bean으로 등록 -->
+	<!-- <context:component-scan base-package="com.simple.controller"/> -->
+	<context:component-scan base-package="com.simple.**"> <!-- @Controller가 붙어있는 클래스들을 빈으로 자동 생성 -->
+		<context:include-filter type="annotation" expression="com.simple.controller.HomeController"/> <!-- 이런 식으로 표현 가능 -->
+	</context:component-scan>
+	
+	<!-- css, js 정적 자원들은 폴더 경로로 바로 연결 -->
+	<!-- /resource경로로 들어오면 /resource폴더로 연결 -->
+	<mvc:resources location="/resource" mapping="/resource/**"/>
 
 	<!-- 뷰 합성기(뷰 리졸버) -->
 	<bean class="org.springframework.web.servlet.view.InternalResourceViewResolver">

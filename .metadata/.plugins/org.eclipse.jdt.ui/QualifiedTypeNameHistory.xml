@@ -2,14 +2,27 @@
 <qualifiedTypeNameHistroy>
     <fullyQualifiedTypeName name="javax.swing.Spring"/>
     <fullyQualifiedTypeName name="ex01.SpringTest"/>
-    <fullyQualifiedTypeName name="ex02.Chef"/>
-    <fullyQualifiedTypeName name="ex02.Hotel"/>
-    <fullyQualifiedTypeName name="ex02.DatabaseDev"/>
     <fullyQualifiedTypeName name="ex03.Customer"/>
     <fullyQualifiedTypeName name="java.util.Map"/>
     <fullyQualifiedTypeName name="java.lang.invoke.CallSite"/>
     <fullyQualifiedTypeName name="java.util.List"/>
-    <fullyQualifiedTypeName name="org.springframework.context.support.GenericXmlApplicationContext"/>
     <fullyQualifiedTypeName name="ex04.Airplane"/>
     <fullyQualifiedTypeName name="ex04.Car"/>
+    <fullyQualifiedTypeName name="ex05.Printer"/>
+    <fullyQualifiedTypeName name="ex06.ServiceImpl"/>
+    <fullyQualifiedTypeName name="org.springframework.beans.factory.annotation.Autowired"/>
+    <fullyQualifiedTypeName name="org.springframework.context.support.GenericXmlApplicationContext"/>
+    <fullyQualifiedTypeName name="ex06.Controller"/>
+    <fullyQualifiedTypeName name="org.springframework.beans.factory.annotation.Qualifier"/>
+    <fullyQualifiedTypeName name="org.springframework.context.annotation.Configuration"/>
+    <fullyQualifiedTypeName name="ex02.Chef"/>
+    <fullyQualifiedTypeName name="org.springframework.context.annotation.Bean"/>
+    <fullyQualifiedTypeName name="ex02.Hotel"/>
+    <fullyQualifiedTypeName name="ex02.DatabaseDev"/>
+    <fullyQualifiedTypeName name="ex06.DAO"/>
+    <fullyQualifiedTypeName name="org.springframework.context.annotation.AnnotationConfigApplicationContext"/>
+    <fullyQualifiedTypeName name="ex07.JavaConfig"/>
+    <fullyQualifiedTypeName name="ex02.MemberDAO"/>
+    <fullyQualifiedTypeName name="org.springframework.web.servlet.mvc.multiaction.MultiActionController"/>
+    <fullyQualifiedTypeName name="org.springframework.web.servlet.ModelAndView"/>
 </qualifiedTypeNameHistroy>
