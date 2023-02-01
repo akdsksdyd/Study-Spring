@@ -5,7 +5,6 @@
     <fullyQualifiedTypeName name="ex03.Customer"/>
     <fullyQualifiedTypeName name="java.util.Map"/>
     <fullyQualifiedTypeName name="java.lang.invoke.CallSite"/>
-    <fullyQualifiedTypeName name="java.util.List"/>
     <fullyQualifiedTypeName name="ex04.Airplane"/>
     <fullyQualifiedTypeName name="ex04.Car"/>
     <fullyQualifiedTypeName name="ex05.Printer"/>
@@ -24,5 +23,19 @@
     <fullyQualifiedTypeName name="ex07.JavaConfig"/>
     <fullyQualifiedTypeName name="ex02.MemberDAO"/>
     <fullyQualifiedTypeName name="org.springframework.web.servlet.mvc.multiaction.MultiActionController"/>
+    <fullyQualifiedTypeName name="org.springframework.web.bind.annotation.GetMapping"/>
+    <fullyQualifiedTypeName name="org.springframework.web.bind.annotation.PostMapping"/>
+    <fullyQualifiedTypeName name="javax.servlet.http.HttpServletRequest"/>
+    <fullyQualifiedTypeName name="java.util.Arrays"/>
+    <fullyQualifiedTypeName name="org.springframework.web.bind.annotation.RequestParam"/>
+    <fullyQualifiedTypeName name="java.util.List"/>
+    <fullyQualifiedTypeName name="com.simple.command.ReqVO"/>
+    <fullyQualifiedTypeName name="org.springframework.validation.BindingResult"/>
+    <fullyQualifiedTypeName name="org.springframework.web.bind.annotation.RequestMethod"/>
+    <fullyQualifiedTypeName name="org.springframework.stereotype.Controller"/>
+    <fullyQualifiedTypeName name="org.springframework.web.bind.annotation.ResponseBody"/>
+    <fullyQualifiedTypeName name="org.springframework.ui.Model"/>
+    <fullyQualifiedTypeName name="java.util.Date"/>
+    <fullyQualifiedTypeName name="org.springframework.web.bind.annotation.RequestMapping"/>
     <fullyQualifiedTypeName name="org.springframework.web.servlet.ModelAndView"/>
 </qualifiedTypeNameHistroy>
