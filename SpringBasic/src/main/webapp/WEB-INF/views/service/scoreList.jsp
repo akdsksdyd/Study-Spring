@@ -12,10 +12,11 @@
 	<h2>목록화면</h2>
 	
 	<c:forEach var="article" items="${list }" varStatus="num">
+		${num.index+1 } 
 		이름: ${article.name } 
 		국어점수: ${article.kor  }
 		영어점수: ${article.eng } 
-		<a href="delete?num=${num.index }">삭제</a>
+		<a href="delete?num=${article.num }">삭제</a>
 		<br>
 	</c:forEach>
 

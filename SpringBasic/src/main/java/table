@@ -1,0 +1,30 @@
+-- type 
+-- varchar2 -> varchar
+-- number(10) -> int(8)  -- 오라클에서는 괄호 안의 숫자가 자릿수, mysql에서는 바이트 수 지정 안하면 최대
+-- date -> date or timestamp (date 날짜, timestamp 날짜 시분초)
+-- 시퀀스 -> auto_increment (따로 설정 하지 않아도 증가함)
+-- 함수 -> 구글링
+-- 조인 -> 완벽 동일
+-- 서브쿼리 -> mysql에서는 테이블 엘리어스를 반드시 지정 해 줘야 한다.
+-- mysql은 version별로 대소문자를 구분 할 수도 있고, 구분 안 할 수도 있다.
+
+create table score(
+	num int primary key auto_increment,
+    name varchar(30) not null,
+    kor int default 0,
+    eng int default 0
+);
+
+drop table score;
+
+select * from score;
+
+select A.*
+from(select * 
+	from score) A;
+
+-- 커밋은 자동으로 1값이 들어가서 커밋이 자동으로 된다.    
+select @@autocommit;
+set autocommit = 1;
+set autocommit = 0;
+    
