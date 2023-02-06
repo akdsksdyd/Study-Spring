@@ -10,6 +10,50 @@
 	<select id="getTime" resultType="string">
 		select now()
 	</select>
+	
+	<!-- ;은 없다.(적으면 에러) -->
+	<!-- 한 행에 대한 처리를 할 데이터 타입 -->
+	<!-- 데이터 타입은 패키지 경로를 모두 적어줘야함. -->
+	<select id="getScore" resultType="com.simple.command.ScoreVO">
+		select * from score
+	</select>
+	
+	<!-- 매개변수 - 단일값(매개변수명을 그대로) -->
+	<select id="getOne" resultType="com.simple.command.ScoreVO">
+		select * from score where num = #{a}
+	</select>
+	
+	<insert id="insertOne" parameterType="string">
+		insert into score(name) values(#{name})
+	</insert>
+	
+	<insert id="insertTwo" parameterType="com.simple.command.ScoreVO">
+		insert into score(name, kor, eng) 
+		values(#{name}, #{kor}, #{eng})
+	</insert>
+	
+	<insert id="insertThree">
+		insert into score(name, kor, eng) 
+		values(#{name}, #{kor}, #{eng})
+	</insert>
+	
+	<select id="selectMap" resultType="map" parameterType="int">
+		select * from score where num = #{num}
+	</select>
+	
+	<select id="selectTwo" resultType="map">
+		select * from score
+	</select>
+	
+	<!-- alias설정이 있다면 parameter, result타입에 단축명으로 사용 가능. -->
+	<update id="updateOne" parameterType="ScoreVO">
+		update score set name = #{name}, kor = #{kor}, eng = #{eng}
+		where num = #{num}
+	</update>
+	
+	<insert id="insertFour">
+		insert into score(name, kor) values(#{name}, #{kor})
+	</insert>
 
 </mapper>
 
