@@ -1,8 +1,0 @@
-package ex06;
-
-public class Controller {
-	
-	public void hello() {
-	}
-
-}

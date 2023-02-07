@@ -33,37 +33,13 @@ public class HomeController {
 		
 		model.addAttribute("serverTime", formattedDate );
 		
-		return "home";
-	}
-	
-	@RequestMapping("/index")
-	public String indexView() {
-		
 		return "index";
 	}
 	
-	@RequestMapping("/notice_list")
-	public String listView() {
-
-		return "trip/notice_list";
-	}
-
-	@RequestMapping("/notice_modify")
-	public String modifyView() {
-		
-		return "trip/notice_modify";
-	}
-
-	@RequestMapping("/notice_view")
-	public String viewView() {
-		
-		return "trip/notice_view";
-	}
-
-	@RequestMapping("/notice_write")
-	public String writeView() {
-		
-		return "trip/notice_write";
+	//header
+	@RequestMapping("/header")
+	public String header() {
+		return "layout/header";
 	}
 	
 }

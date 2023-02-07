@@ -1,9 +1,0 @@
-package ex06;
-
-public class Controller {
-	
-	public String hello() {
-		return null;
-	}
-
-}
