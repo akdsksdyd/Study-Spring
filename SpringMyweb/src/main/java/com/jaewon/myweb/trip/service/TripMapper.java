@@ -12,6 +12,16 @@ public interface TripMapper {
 	public int noticeRegist(TripVO vo);
 	
 	public ArrayList<TripVO> getList();
+	
+	public TripVO getContent(int tno);
+	
+	public int noticeModify(TripVO vo);
+	
+	public int deleteForm(int tno);
+	
+	public void upHit(int tno);
+	
+	public ArrayList<TripVO> getPrevNext(int tno);
 
 }
 

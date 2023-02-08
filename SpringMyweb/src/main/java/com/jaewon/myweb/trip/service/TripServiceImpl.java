@@ -22,9 +22,35 @@ public class TripServiceImpl implements TripService{
 	@Override
 	public ArrayList<TripVO> getList() {
 		
-		ArrayList<TripVO> list = tripMapper.getList();
+		return tripMapper.getList();
+	}
+	
+	public TripVO getContent(int tno) {
 		
-		return list;
+		return tripMapper.getContent(tno);
+	};
+	
+	@Override
+	public int noticeModify(TripVO vo) {
+		
+		return tripMapper.noticeModify(vo);
+	}
+	
+	@Override
+	public int deleteForm(int tno) {
+
+		return tripMapper.deleteForm(tno);
+	}
+	
+	@Override
+	public void upHit(int tno) {
+		tripMapper.upHit(tno);
+	}
+	
+	@Override
+	public ArrayList<TripVO> getPrevNext(int tno) {
+		
+		return tripMapper.getPrevNext(tno);
 	}
 	
 }

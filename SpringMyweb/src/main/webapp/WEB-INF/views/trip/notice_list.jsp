@@ -1,6 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/fmt" prefix="fmt" %>
 
 	
 	<div id="container">
@@ -43,13 +44,13 @@
 						<th scope="col">작성일</th>
 					</tr>
 				</thead>
-				<c:forEach var="article" items="${list }" varStatus="tno">
+				<c:forEach var="article" items="${list }" varStatus="num">
 					<tbody>
 						<tr>
-							<td>${article.tno }</td>
-							<td class="tit_notice"><a href="javascript:;">${article.title }</a> </td>
+							<td>${num.count }</td>
+							<td class="tit_notice"><a href="notice_view?tno=${article.tno }">${article.title }</a> </td>
 							<td>${article.hit }</td>
-							<td>${article.regdate }</td>
+							<td><fmt:formatDate value="${article.regdate }" pattern="yyyy-MM-dd"/></td>
 						</tr>
 					</tbody>
 				</c:forEach>
