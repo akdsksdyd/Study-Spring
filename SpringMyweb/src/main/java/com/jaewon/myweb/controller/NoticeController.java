@@ -17,6 +17,8 @@ import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
 import com.jaewon.myweb.command.TripVO;
 import com.jaewon.myweb.trip.service.TripService;
+import com.jaewon.myweb.util.Criteria;
+import com.jaewon.myweb.util.PageVO;
 
 @Controller
 @RequestMapping("/trip")
@@ -27,7 +29,7 @@ public class NoticeController {
 	private TripService tripService;
 	
 	@RequestMapping("/notice_list")
-	public String notice_list(Model model) {
+	public String notice_list(Criteria cri, Model model) {
 		
 		/*
 		 * service, mapper영역에 getList 함수를 선언하고
@@ -35,8 +37,32 @@ public class NoticeController {
 		 * model에 담아서
 		 * 화면에서는 반복문으로 처리 
 		 */
-		ArrayList<TripVO> list =  tripService.getList();
+//		ArrayList<TripVO> list =  tripService.getList(cri);
+//		model.addAttribute("list", list);
+		
+		//페이지네이션
+//		int total = tripService.getTotal();
+//		PageVO pageVO = new PageVO(cri, total);
+//		System.out.println(pageVO.toString());
+		
+		//페이지 검색처리
+		/*
+		 * 1. 화면에서는 page, amount, searchType, searchName을 넘긴다.
+		 * 2. criteria에서 검색값을 받는다.
+		 * 3. sql을 바꾼다. (동적쿼리)
+		 * 4. total sql도 바꾼다 (동적쿼리)
+		 * 5. 페이지 a태그 클릭시 searchType, searchName을 쿼리스트링으로 넘긴다.
+		 * 6. 무엇을 검색했는지 표시
+		 */
+		System.out.println(cri.toString());
+		
+		ArrayList<TripVO> list =  tripService.getList(cri);
+		
+		int total = tripService.getTotal(cri);
+		PageVO pageVO = new PageVO(cri, total);
+		
 		model.addAttribute("list", list);
+		model.addAttribute("pageVO", pageVO);
 
 		return "trip/notice_list";
 	}
